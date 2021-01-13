@@ -1,8 +1,13 @@
 {
   "resources": [
+    {"id":{"name":"scr_percentage_to_time","path":"scripts/scr_percentage_to_time/scr_percentage_to_time.yy",},"order":2,},
+    {"id":{"name":"scr_calculate_time","path":"scripts/scr_calculate_time/scr_calculate_time.yy",},"order":0,},
     {"id":{"name":"spr_recorder_1","path":"sprites/spr_recorder_1/spr_recorder_1.yy",},"order":1,},
     {"id":{"name":"spr_fingers","path":"sprites/spr_fingers/spr_fingers.yy",},"order":2,},
+    {"id":{"name":"obj_historam","path":"objects/obj_historam/obj_historam.yy",},"order":2,},
+    {"id":{"name":"scr_time_to_percentage","path":"scripts/scr_time_to_percentage/scr_time_to_percentage.yy",},"order":1,},
     {"id":{"name":"spr_recorder_2","path":"sprites/spr_recorder_2/spr_recorder_2.yy",},"order":0,},
+    {"id":{"name":"obj_manager","path":"objects/obj_manager/obj_manager.yy",},"order":1,},
     {"id":{"name":"obj_recorder","path":"objects/obj_recorder/obj_recorder.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
@@ -45,7 +50,9 @@
   "TextureGroups": [
     {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},
   ],
-  "IncludedFiles": [],
+  "IncludedFiles": [
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"test.json","resourceType":"GMIncludedFile",},
+  ],
   "MetaData": {
     "IDEVersion": "2.3.1.542",
   },
