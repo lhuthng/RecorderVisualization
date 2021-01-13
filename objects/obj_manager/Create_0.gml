@@ -1,5 +1,38 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+sounds = [
+	0,
+	snd_5c,
+	snd_5c_,
+	snd_5d,
+	snd_5d_,
+	snd_5e,
+	snd_5f,
+	snd_5f_,
+	snd_5g,
+	snd_5g_,
+	snd_6a,
+	snd_6a_,
+	snd_6b,
+	snd_6c,
+	snd_6c_,
+	snd_6d,
+	snd_6d_,
+	snd_6e,
+	snd_6f,
+	snd_6f_,
+	snd_6g,
+	snd_6g_,
+	snd_7a,
+	snd_7a_,
+	snd_7b,
+	snd_7c,
+	snd_7c_,
+	snd_7d
+]
+
+
 var zipped = [
 	0,
 	4095, 
