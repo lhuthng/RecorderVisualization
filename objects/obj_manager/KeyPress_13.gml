@@ -21,6 +21,6 @@ if (file_exists("test.json")){
 			times[index] = time;
 			time += scr_calculate_time(other.whimsical, sequence[index, 1]);
 		}
-		total_time = time + delay_time;
+		total_time = time;
 	}
 }
