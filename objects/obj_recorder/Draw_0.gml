@@ -18,11 +18,9 @@ draw_set_alpha(0.8);
 
 var index, pitch;
 
-// Left-Thumb
 pitch = manager.notes[note, 0];
 if (pitch != 0) draw_sprite(spr_fingers, 2 - pitch, x + offset_thumb_x, y + offset_thumb_y);
 
-// 
 for (index = 1; index <= 6; index++) {
 	pitch = manager.notes[note, index];
 	if (pitch != 0) {

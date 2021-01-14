@@ -75,17 +75,6 @@ for (index = 0; index <= 28; index++) {
 	}
 }
 
-
-if (file_exists("test.json")){
-	var buffer = buffer_load("test.json");
-	var str = buffer_read(buffer, buffer_string);
-	var data = json_parse(str);
-	whimsical = data.whimsical;
-	bars = data.bars;
-	keys_signature = data.keys_signature;
-	offset = data.offset;
-}
-
 var offset_x = -5;
 
 visual = instance_create_depth(x, y, -2, obj_recorder);
