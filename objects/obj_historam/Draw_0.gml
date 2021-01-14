@@ -2,16 +2,21 @@
 // You can write your code in this editor
 
 // Draw background
-draw_set_color(4473924);
-draw_rectangle(0, 0, x, y + box_height, false);
+var offset_x = 2, offset_y = 40;
+draw_sprite(spr_frame, 1, x + offset_x, y + offset_y);
 
-var index, time = current_time + full_time;
+var index, time = start_time + full_time;
+var check = true;
 if (current != -1 and current < array_length(sequence)) {
-	if (current < array_length(sequence) and times[current] + scr_calculate_time(manager.whimsical, sequence[current, 1]) < current_time) {
+	if (not pause) {
+		start_time += current_time - last_time;
+		last_time = current_time;
+	}
+	if (current < array_length(sequence) and times[current] + scr_calculate_time(manager.whimsical, sequence[current, 1]) < start_time) {
 		visual.note = 0;
 		current += 1;
+		if (current == -1) check = false;
 	}
-	draw_set_circle_precision(8);
 	for (index = current; index < array_length(sequence) and times[index] <= time; index++) {
 		if (sequence[index, 0] == 0) continue;
 		var pitch = clamp(sequence[index, 0] + offset, 1, 27);
@@ -20,7 +25,7 @@ if (current != -1 and current < array_length(sequence)) {
 			if (visual.note != pitch) {
 				audio_stop_all();
 				visual.note = pitch;
-				if (pitch != 0) audio_play_sound(manager.sounds[pitch], 1, true);
+				if (pitch != 0) audio_play_sound(manager.sounds[pitch], 1, false);
 			}
 			length_2 = x;
 		}
@@ -29,7 +34,6 @@ if (current != -1 and current < array_length(sequence)) {
 		length_1 += 0.5;
 		if (length_1 < -1) length_1 = -1;
 		with (visual) {
-			draw_rectangle(length_1, 2, length_2, historam.box_height, false);
 			var hole = manager.notes[pitch, 0];
 			if (hole != 0) scr_draw_note(2 - hole, length_1, y + offset_thumb_y - 1, length_2);
 			var hole_index;
@@ -42,13 +46,16 @@ if (current != -1 and current < array_length(sequence)) {
 		}
 	}
 }
-else {
+if (not check) {
 	audio_stop_all();
 	current = -1;
 	visual.note = 0;
+	pause = true;
 }
 
-draw_set_color(1710618);
-draw_line_width(-1.5, y + box_height - 0.5, x + 0.5, y + box_height - 0.5, 1);
-draw_line_width(-1.5, 0.5, x + 0.5, 0.5, 1);
-draw_line_width(x, y, x, y + box_height, 1);
+draw_sprite(spr_frame, 0, x + offset_x, y + offset_y);
+
+//draw_set_color(1710618);
+//draw_line_width(-1.5, y + box_height - 0.5, x + 0.5, y + box_height - 0.5, 1);
+//draw_line_width(-1.5, 0.5, x + 0.5, 0.5, 1);
+//draw_line_width(x, y, x, y + box_height, 1);

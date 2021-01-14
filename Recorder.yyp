@@ -8,6 +8,7 @@
     {"id":{"name":"spr_recorder_1","path":"sprites/spr_recorder_1/spr_recorder_1.yy",},"order":1,},
     {"id":{"name":"snd_7b","path":"sounds/snd_7b/snd_7b.yy",},"order":5,},
     {"id":{"name":"snd_7a","path":"sounds/snd_7a/snd_7a.yy",},"order":30,},
+    {"id":{"name":"spr_frame","path":"sprites/spr_frame/spr_frame.yy",},"order":8,},
     {"id":{"name":"snd_6a_","path":"sounds/snd_6a_/snd_6a_.yy",},"order":33,},
     {"id":{"name":"snd_6a","path":"sounds/snd_6a/snd_6a.yy",},"order":32,},
     {"id":{"name":"snd_6f","path":"sounds/snd_6f/snd_6f.yy",},"order":11,},

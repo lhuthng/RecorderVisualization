@@ -87,3 +87,5 @@ visual.manager = self;
 historam.manager = self;
 
 historam.box_height = 125;
+
+existed = false;
