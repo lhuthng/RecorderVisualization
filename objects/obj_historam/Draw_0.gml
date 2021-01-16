@@ -3,7 +3,7 @@
 
 // Draw background
 var offset_x = 2, offset_y = 40;
-draw_sprite(spr_frame, 1, x + offset_x, y + offset_y);
+scr_draw_sprite_1_part(spr_frame, 1, x + offset_x + 2, 0, y + offset_y);
 
 var index, border_time = start_time + full_time;
 var check = true;
@@ -23,9 +23,6 @@ if (current != -1 and current < array_length(sequence)) {
 		var pitch = clamp(sequence[index, 0] + offset, 1, 27);
 		var length_1 = scr_map_value(times[index] + scr_calculate_time(manager.whimsical, sequence[index, 1]), start_time, border_time, x, 0);
 		var length_2 = scr_map_value(times[index], start_time, border_time, x, 0);
-		
-		// length_2 -= 0.5;
-		// length_1 += 0.5;
 		
 		if (length_1 < -1) length_1 = -1;
 		if (length_2 >= x) {
@@ -58,8 +55,12 @@ if (not check) {
 	pause = true;
 }
 
-draw_sprite(spr_frame, 0, x + offset_x, y + offset_y);
+scr_draw_sprite_3_parts(spr_frame, 0, 0, 5, x + offset_x, 0, y + offset_y);
 
-draw_sprite(spr_timeline_bar, 0, x + offset_x - 5, y + offset_y + 70);
+// draw_sprite(spr_frame, 0, x + offset_x, y + offset_y);
 
-draw_sprite(spr_timeline_button, 0, scr_map_value(clamp(start_time, 0, total_time), 0, total_time, x + offset_x - 6, 9.5), y + offset_y + 70);
+scr_draw_sprite_3_parts(spr_timeline_bar, 0, 1, 1, x + offset_x - 7, 2, y + offset_y + 70);
+
+// draw_sprite(spr_timeline_bar, 0, x + offset_x - 5, y + offset_y + 70);
+
+draw_sprite(spr_timeline_button, 0, scr_map_value(clamp(start_time, 0, total_time), 0, total_time, x + offset_x - 6, 8), y + offset_y + 70);

@@ -78,7 +78,7 @@ for (index = 0; index <= 28; index++) {
 var offset_x = -5;
 
 visual = instance_create_depth(x, y, -2, obj_recorder);
-historam = instance_create_depth(x + offset_x - 0.5, y, -3, obj_historam);
+historam = instance_create_depth(x + offset_x - 1, y, -3, obj_historam);
 
 visual.historam = historam;
 historam.visual = visual;
