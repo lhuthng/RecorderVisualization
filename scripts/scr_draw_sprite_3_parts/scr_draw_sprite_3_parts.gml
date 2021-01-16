@@ -1,6 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_draw_sprite_3_parts(image, index, left, right, width, x, y) {
+
 	var image_width = sprite_get_width(image), image_height = sprite_get_height(image);
 	var height_scale = 1;
 	var width_scale = (width - left - right) / (image_width - left - right);
