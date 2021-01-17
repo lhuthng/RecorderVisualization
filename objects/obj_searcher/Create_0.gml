@@ -10,7 +10,7 @@ var index = 0;
 var name = file_find_first("*.json", 0);
 if (name != "") {
 	do {
-		list[index++] = name;
+		list[index++] = string_copy(name, 0, string_length(name) - 5);
 		name = file_find_next();
 	} until (name == "");
 	current = 0;
@@ -20,5 +20,5 @@ file_find_close();
 
 
 width = 20;
-height = 5;
-space = 7;
+height = 8;
+space = 10;

@@ -5,6 +5,7 @@
     {"id":{"name":"snd_7a_","path":"sounds/snd_7a_/snd_7a_.yy",},"order":31,},
     {"id":{"name":"snd_5c","path":"sounds/snd_5c/snd_5c.yy",},"order":21,},
     {"id":{"name":"spr_recorder_1","path":"sprites/spr_recorder_1/spr_recorder_1.yy",},"order":1,},
+    {"id":{"name":"scr_draw_sprite_9_parts","path":"scripts/scr_draw_sprite_9_parts/scr_draw_sprite_9_parts.yy",},"order":12,},
     {"id":{"name":"snd_7b","path":"sounds/snd_7b/snd_7b.yy",},"order":5,},
     {"id":{"name":"scr_check_inside_rectangle","path":"scripts/scr_check_inside_rectangle/scr_check_inside_rectangle.yy",},"order":10,},
     {"id":{"name":"snd_7a","path":"sounds/snd_7a/snd_7a.yy",},"order":30,},

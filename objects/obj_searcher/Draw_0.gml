@@ -5,6 +5,9 @@
 
 
 for (var index = 0; index < 2; index++){
-	draw_set_color(current == index ? c_red : c_green);
+	var color = current == index ? c_red : c_green
+	draw_set_color(color);
 	draw_rectangle(x, y + space * index, x + width, y + height + space * index, false);
+	draw_set_color(c_red + c_green - color);
+	draw_text(x, y + space * index, list[index]);
 }
