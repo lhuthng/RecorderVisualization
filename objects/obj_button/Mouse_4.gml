@@ -3,6 +3,7 @@
 
 if (not pressed) {
 	image_index = 1;
+	image_blend = c_gray;
 	pressed = true;
 	released = false;
 }

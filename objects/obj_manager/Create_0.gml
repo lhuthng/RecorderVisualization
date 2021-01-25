@@ -77,15 +77,12 @@ for (index = 0; index <= 28; index++) {
 
 var offset_x = -5;
 
-visual = instance_create_depth(x, y, -2, obj_recorder);
-historam = instance_create_depth(x + offset_x - 1, y, -3, obj_historam);
-
-visual.historam = historam;
-historam.visual = visual;
-
+visual = instance_create_depth(x + 1, y, 2, obj_recorder);
+historam = instance_create_depth(x + offset_x - 1, y + 40, 3, obj_historam);
+historam.height = 79;
+controller = instance_create_depth(x + offset_x, y + 39, 4, obj_controller);
+searcher = instance_create_depth(0, y + 37 + historam.height, -5, obj_searcher);
 visual.manager = self;
 historam.manager = self;
-
-historam.box_height = 125;
 
 existed = false;

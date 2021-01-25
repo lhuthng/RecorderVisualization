@@ -1,40 +1,23 @@
-/// @description Insert description here
+ /// @description Insert description here
 // You can write your code in this editor
 
 // Draw background
-var offset_x = 2, offset_y = 40;
-scr_draw_sprite_1_part(spr_frame, 1, x + offset_x + 2, 0, y + offset_y);
+var full = scr_calulate_index(false, false, false, false);
+scr_draw_sprite_9_parts(spr_frame_background, full, 3, 3, 3, 3, x + 3, height, 0, y, c_white, 1);
 
 var index, border_time = start_time + full_time;
-var check = true;
-
-if (current != -1 and current < array_length(sequence)) {
-	if (not pause) {
-		start_time += current_time - last_time;
-		last_time = current_time;
-	}
-	if (current < array_length(sequence) and times[current] + scr_calculate_time(manager.whimsical, sequence[current, 1]) < start_time) {
-		visual.note = 0;
-		current += 1;
-		if (current == -1) check = false;
-	}
-	for (index = current; index < array_length(sequence) and times[index] <= border_time; index++) {
+ 
+if (first_note != -1 and first_note < array_length(sequence)) {
+	for (index = first_note; index < array_length(sequence) and times[index] <= border_time; index++) {
 		if (sequence[index, 0] == 0) continue;
 		var pitch = clamp(sequence[index, 0] + offset, 1, 27);
 		var length_1 = scr_map_value(times[index] + scr_calculate_time(manager.whimsical, sequence[index, 1]), start_time, border_time, x, 0);
 		var length_2 = scr_map_value(times[index], start_time, border_time, x, 0);
 		
 		if (length_1 < -1) length_1 = -1;
-		if (length_2 >= x) {
-			if (visual.note != pitch) {
-				audio_stop_all();
-				visual.note = pitch;
- 				if (pitch != 0) audio_play_sound(manager.sounds[pitch], 1, false);
-			}
-			length_2 = x;
-		}
+		if (length_2 >= x + 1) length_2 = x + 1;
 		
-		with (visual) {
+		with (manager.visual) {
 			var hole = manager.notes[pitch, 0];
 			if (hole != 0) scr_draw_note(2 - hole, length_1, y + offset_thumb_y - 1, length_2);
 			var hole_index;
@@ -46,21 +29,28 @@ if (current != -1 and current < array_length(sequence)) {
 			if (hole != 0) scr_draw_note(4 - hole, length_1, y + offset_pinky_y - 1, length_2);
 		}
 	}
-	
-}
-if (not check) {
-	audio_stop_all();
-	current = -1;
-	visual.note = 0;
-	pause = true;
 }
 
-scr_draw_sprite_3_parts(spr_frame, 0, 0, 5, x + offset_x, 0, y + offset_y);
+scr_draw_sprite_9_parts(spr_frame, full, 3, 3, 3, 3, x + 3, 79, 0, y, c_white, 1);
 
-// draw_sprite(spr_frame, 0, x + offset_x, y + offset_y);
+scr_draw_sprite_9_parts(spr_timeline_bar, 0, 1, 1, 1, 1, x- 10, 4, 5, y + 70, c_white, 1);
+scr_draw_sprite_9_parts(spr_timeline_button, 0, 1, 1, 1, 1, 5, 4, scr_map_value(clamp(start_time, 0, total_time), 0, total_time, x - 6, 11) - 5, y+ 70, c_white, 1);
 
-scr_draw_sprite_3_parts(spr_timeline_bar, 0, 1, 1, x + offset_x - 7, 2, y + offset_y + 70);
+var offset_x = -5;
+var offset_y = 2;
+var _height = 12;
+var _width = sprite_get_width(spr_legends) + 6
+// scr_draw_sprite_9_parts(spr_frame_background, full, 3, 3, 3, 3, _width, _height, x + offset_x - _width, y + offset_y - _height, c_white, 1);
+var bottom_free = scr_calulate_index(false, false, false, true);
 
-// draw_sprite(spr_timeline_bar, 0, x + offset_x - 5, y + offset_y + 70);
+scr_draw_sprite_9_parts(spr_frame_background,	bottom_free, 3, 3, 3, 3, _width, _height, x + offset_x - _width, y + offset_y - _height, c_white, 1);
+draw_sprite(spr_legends, 0, x + offset_x - _width + 3, y + offset_y - _height + 3);
+scr_draw_sprite_9_parts(spr_frame,				bottom_free, 3, 3, 3, 3, _width, _height, x + offset_x - _width, y + offset_y - _height, c_white, 1);
+draw_sprite(spr_frame_join_background, 0,	x + offset_x - _width, y + offset_y - 2);
+draw_sprite(spr_frame_join, 0,				x + offset_x - _width, y + offset_y - 2);
+draw_sprite(spr_frame_join_background, 3,	x + offset_x - 3, y + offset_y - 2);
+draw_sprite(spr_frame_join, 3,				x + offset_x - 3, y + offset_y - 2);
 
-draw_sprite(spr_timeline_button, 0, scr_map_value(clamp(start_time, 0, total_time), 0, total_time, x + offset_x - 6, 8), y + offset_y + 70);
+
+draw_set_color(c_white);
+draw_text(100, 100, full_time);
