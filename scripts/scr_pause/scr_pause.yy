@@ -1,12 +1,13 @@
 {
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Buttons",
-    "path": "folders/Scripts/Buttons.yy",
+  "$GMScript":"v1",
+  "%Name":"scr_pause",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_pause",
+  "parent":{
+    "name":"Buttons",
+    "path":"folders/Scripts/Buttons.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "scr_pause",
-  "tags": [],
-  "resourceType": "GMScript",
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -52,5 +52,5 @@ draw_sprite(spr_frame_join_background, 3,	x + offset_x - 3, y + offset_y - 2);
 draw_sprite(spr_frame_join, 3,				x + offset_x - 3, y + offset_y - 2);
 
 
-draw_set_color(c_white);
-draw_text(100, 100, full_time);
+//draw_set_color(c_white);
+//draw_text(100, 100, full_time);

@@ -1,12 +1,13 @@
 {
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Buttons",
-    "path": "folders/Scripts/Buttons.yy",
+  "$GMScript":"v1",
+  "%Name":"scr_stop_visual",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_stop_visual",
+  "parent":{
+    "name":"Buttons",
+    "path":"folders/Scripts/Buttons.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "scr_stop_visual",
-  "tags": [],
-  "resourceType": "GMScript",
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

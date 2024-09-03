@@ -1,12 +1,13 @@
 {
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Maths",
-    "path": "folders/Scripts/Maths.yy",
+  "$GMScript":"v1",
+  "%Name":"scr_map_value",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_map_value",
+  "parent":{
+    "name":"Maths",
+    "path":"folders/Scripts/Maths.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "scr_map_value",
-  "tags": [],
-  "resourceType": "GMScript",
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

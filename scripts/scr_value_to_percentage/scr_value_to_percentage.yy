@@ -1,12 +1,13 @@
 {
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Maths",
-    "path": "folders/Scripts/Maths.yy",
+  "$GMScript":"v1",
+  "%Name":"scr_value_to_percentage",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_value_to_percentage",
+  "parent":{
+    "name":"Maths",
+    "path":"folders/Scripts/Maths.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "scr_value_to_percentage",
-  "tags": [],
-  "resourceType": "GMScript",
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
