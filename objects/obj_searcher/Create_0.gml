@@ -3,7 +3,7 @@
 
 draw_set_font(fnt_pixel_font);
 
-gasp = 1;
+gasp = 0.5;
 normal = 0.3;
 
 starting_index = 0;

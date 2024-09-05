@@ -51,6 +51,6 @@ draw_sprite(spr_frame_join, 0,				x + offset_x - _width, y + offset_y - 2);
 draw_sprite(spr_frame_join_background, 3,	x + offset_x - 3, y + offset_y - 2);
 draw_sprite(spr_frame_join, 3,				x + offset_x - 3, y + offset_y - 2);
 
-
+draw_line_width_color(x - 6, y + 4, x - 6, y + 66, 1,  $242424,  $242424);
 //draw_set_color(c_white);
 //draw_text(100, 100, full_time);

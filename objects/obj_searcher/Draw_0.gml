@@ -16,12 +16,13 @@ for (var index = 0; index < min(limit - starting_index, 5); index++){
 	if (current == index) {
 		bg_color = highlight_background;
 		text_color = highlight_text;
+		text = current_text;
 	}
 	else {
 		bg_color = normal_background;
 		text_color = normal_text;
+		text = display_list[starting_index + index];
 	}
-	text = display_list[starting_index + index];
 	draw_set_color(bg_color);
 	draw_rectangle(x + 4, y + space * index, x + width + 4, y + height + space * index, false);
 	draw_set_color(text_color);
@@ -35,3 +36,4 @@ draw_sprite(spr_frame_join, 4, x, y);
 
 draw_sprite(spr_frame_join_background, 2, x + width + 6, y);
 draw_sprite(spr_frame_join, 2, x + width + 6, y);
+
