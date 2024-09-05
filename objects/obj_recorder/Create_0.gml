@@ -16,3 +16,5 @@ offset_main_y = 50;
 
 offset_pinky_x = 1;
 offset_pinky_y = offset_main_y + step * 6 + 12;
+
+depth = -3;

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_is_between",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_is_between",
+  "parent":{
+    "name":"Maths",
+    "path":"folders/Scripts/Maths.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

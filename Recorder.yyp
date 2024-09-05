@@ -31,7 +31,7 @@
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"DOS2.json","CopyToMask":-1,"filePath":"datafiles","name":"DOS2.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"Lost Woods.json","CopyToMask":-1,"filePath":"datafiles","name":"Lost Woods.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
-    {"$GMIncludedFile":"","%Name":"Mario","CopyToMask":-1,"filePath":"datafiles","name":"Mario","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"Mario.json","CopyToMask":-1,"filePath":"datafiles","name":"Mario.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"Merry Go Round of Life.json","CopyToMask":-1,"filePath":"datafiles","name":"Merry Go Round of Life.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"Song of Storms.json","CopyToMask":-1,"filePath":"datafiles","name":"Song of Storms.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"Zelda's Lullaby.json","CopyToMask":-1,"filePath":"datafiles","name":"Zelda's Lullaby.json","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -44,6 +44,7 @@
   "name":"Recorder",
   "resources":[
     {"id":{"name":"fnt_pixel_font","path":"fonts/fnt_pixel_font/fnt_pixel_font.yy",},},
+    {"id":{"name":"obj_background","path":"objects/obj_background/obj_background.yy",},},
     {"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
     {"id":{"name":"obj_historam","path":"objects/obj_historam/obj_historam.yy",},},
@@ -61,6 +62,7 @@
     {"id":{"name":"scr_draw_sprite_3_parts","path":"scripts/scr_draw_sprite_3_parts/scr_draw_sprite_3_parts.yy",},},
     {"id":{"name":"scr_draw_sprite_9_parts","path":"scripts/scr_draw_sprite_9_parts/scr_draw_sprite_9_parts.yy",},},
     {"id":{"name":"scr_function","path":"scripts/scr_function/scr_function.yy",},},
+    {"id":{"name":"scr_is_between","path":"scripts/scr_is_between/scr_is_between.yy",},},
     {"id":{"name":"scr_load_file","path":"scripts/scr_load_file/scr_load_file.yy",},},
     {"id":{"name":"scr_map_value","path":"scripts/scr_map_value/scr_map_value.yy",},},
     {"id":{"name":"scr_pause","path":"scripts/scr_pause/scr_pause.yy",},},
@@ -103,6 +105,7 @@
     {"id":{"name":"snd_g6","path":"sounds/snd_g6/snd_g6.yy",},},
     {"id":{"name":"spr_buttons789","path":"sprites/spr_buttons789/spr_buttons789.yy",},},
     {"id":{"name":"spr_fingers","path":"sprites/spr_fingers/spr_fingers.yy",},},
+    {"id":{"name":"spr_floating_recorder","path":"sprites/spr_floating_recorder/spr_floating_recorder.yy",},},
     {"id":{"name":"spr_frame_background","path":"sprites/spr_frame_background/spr_frame_background.yy",},},
     {"id":{"name":"spr_frame_join_background","path":"sprites/spr_frame_join_background/spr_frame_join_background.yy",},},
     {"id":{"name":"spr_frame_join","path":"sprites/spr_frame_join/spr_frame_join.yy",},},

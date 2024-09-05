@@ -6,6 +6,7 @@ draw_set_font(fnt_pixel_font);
 gasp = 1;
 normal = 0.3;
 
+starting_index = 0;
 current = -1;
 current_text = "";
 current_position = 0;
@@ -39,3 +40,6 @@ width = number_of_characters * character_space;
 height = 8;
 space = 12;
 maximum = 5;
+
+depth = -4;
+

@@ -5,3 +5,5 @@ func = -1;
 
 pressed = false;
 released = false;
+
+depth = -2;
