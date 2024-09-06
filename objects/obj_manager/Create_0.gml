@@ -78,6 +78,7 @@ for (index = 0; index <= 28; index++) {
 var offset_x = -5;
 
 visual = instance_create_depth(x + 1, y, 2, obj_recorder);
+particle_manager = instance_create_layer(x, y, "Particles", obj_particle_manager);
 historam = instance_create_depth(x + offset_x - 1, y + 40, 3, obj_historam);
 historam.height = 79;
 controller = instance_create_depth(x + offset_x, y + 39, 4, obj_controller);

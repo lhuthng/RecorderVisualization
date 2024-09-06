@@ -32,6 +32,7 @@ function scr_load_file(file){
 				}
 				total_time = time;
 			}
+			audio_stop_all();
 			buffer_delete(buffer);
 			scr_stop_visual();
 		}

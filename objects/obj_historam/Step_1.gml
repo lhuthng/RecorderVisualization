@@ -11,6 +11,7 @@ if (first_note != -1 and first_note < array_length(sequence)) {
 		first_note += 1;
 		if (first_note == array_length(sequence)) {
 			audio_stop_all();
+			scr_assign_particle_note(-1);
 			first_note = -1;
 			scr_stop_visual();
 		}
@@ -22,7 +23,8 @@ if (first_note != -1 and first_note < array_length(sequence)) {
 		var pitch = sequence[next_note, 0];
 		if (pitch != 0) {
 			manager.visual.note = clamp(pitch + offset, 1, 27);
-			audio_play_sound(manager.sounds[pitch], 1, false);
+			scr_assign_particle_note(pitch);
+			audio_play_sound(manager.sounds[pitch], 1, false, 0.05);
 		}
 		playing_note = next_note;
 	}

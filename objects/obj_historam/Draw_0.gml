@@ -19,7 +19,9 @@ if (first_note != -1 and first_note < array_length(sequence)) {
 		
 		with (manager.visual) {
 			var hole = manager.notes[pitch, 0];
-			if (hole != 0) scr_draw_note(2 - hole, length_1, y + offset_thumb_y - 1, length_2);
+			if (hole != 0) {
+				scr_draw_note(2 - hole, length_1, y + offset_thumb_y - 1, length_2);
+			}				
 			var hole_index;
 			for (hole_index = 1; hole_index <= 6; hole_index++) {
 				hole = manager.notes[pitch, hole_index];
@@ -54,3 +56,4 @@ draw_sprite(spr_frame_join, 3,				x + offset_x - 3, y + offset_y - 2);
 draw_line_width_color(x - 6, y + 4, x - 6, y + 66, 1,  $242424,  $242424);
 //draw_set_color(c_white);
 //draw_text(100, 100, full_time);
+

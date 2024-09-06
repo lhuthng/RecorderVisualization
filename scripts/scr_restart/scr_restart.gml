@@ -10,6 +10,7 @@ function scr_restart() {
 		with (visual) {
 			note = 0;
 		}
+		scr_assign_particle_note(-1);
 		scr_pause();
 	}
 }
